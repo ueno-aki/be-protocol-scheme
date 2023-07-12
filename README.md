@@ -1,0 +1,1 @@
+https://github.com/PrismarineJS/bedrock-protocol/blob/master/LICENSE
