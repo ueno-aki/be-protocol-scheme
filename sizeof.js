@@ -438,7 +438,7 @@
         let size = 0
         let key = value.key
         size += ((value) => {
-          return (ctx.varint)({"flags":0,"health":1,"variant":2,"color":3,"nametag":4,"owner_eid":5,"target_eid":6,"air":7,"potion_color":8,"potion_ambient":9,"jump_duration":10,"hurt_time":11,"hurt_direction":12,"paddle_time_left":13,"paddle_time_right":14,"experience_value":15,"minecart_display_block":16,"minecart_display_offset":17,"minecart_has_display":18,"old_swell":20,"swell_dir":21,"charge_amount":22,"enderman_held_runtime_id":23,"entity_age":24,"player_flags":26,"player_index":27,"player_bed_position":28,"fireball_power_x":29,"fireball_power_y":30,"fireball_power_z":31,"aux_power":32,"fish_x":33,"fish_z":34,"fish_angle":35,"potion_aux_value":36,"lead_holder_eid":37,"scale":38,"interactive_tag":39,"npc_skin_id":40,"url_tag":41,"max_airdata_max_air":42,"mark_variant":43,"container_type":44,"container_base_size":45,"container_extra_slots_per_strength":46,"block_target":47,"wither_invulnerable_ticks":48,"wither_target_1":49,"wither_target_2":50,"wither_target_3":51,"aerial_attack":52,"boundingbox_width":53,"boundingbox_height":54,"fuse_length":55,"rider_seat_position":56,"rider_rotation_locked":57,"rider_max_rotation":58,"rider_min_rotation":59,"rider_rotation_offset":60,"area_effect_cloud_radius":61,"area_effect_cloud_waiting":62,"area_effect_cloud_particle_id":63,"shulker_peek_id":64,"shulker_attach_face":65,"shulker_attached":66,"shulker_attach_pos":67,"trading_player_eid":68,"trading_career":69,"has_command_block":70,"command_block_command":71,"command_block_last_output":72,"command_block_track_output":73,"controlling_rider_seat_number":74,"strength":75,"max_strength":76,"spell_casting_color":77,"limited_life":78,"armor_stand_pose_index":79,"ender_crystal_time_offset":80,"always_show_nametag":81,"color_2":82,"name_author":83,"score_tag":84,"balloon_attached_entity":85,"pufferfish_size":86,"bubble_time":87,"agent":88,"sitting_amount":89,"sitting_amount_previous":90,"eating_counter":91,"flags_extended":92,"laying_amount":93,"laying_amount_previous":94,"duration":95,"spawn_time":96,"change_rate":97,"change_on_pickup":98,"pickup_count":99,"interact_text":100,"trade_tier":101,"max_trade_tier":102,"trade_experience":103,"skin_id":104,"spawning_frames":105,"command_block_tick_delay":106,"command_block_execute_on_first_tick":107,"ambient_sound_interval":108,"ambient_sound_interval_range":109,"ambient_sound_event_name":110,"fall_damage_multiplier":111,"name_raw_text":112,"can_ride_target":113,"low_tier_cured_discount":114,"high_tier_cured_discount":115,"nearby_cured_discount":116,"nearby_cured_discount_timestamp":117,"hitbox":118,"is_buoyant":119,"base_runtime_id":120,"freezing_effect_strength":121,"buoyancy_data":122,"goat_horn_count":123,"update_properties":124,"movement_sound_distance_offset":125,"heartbeat_interval_ticks":126,"heartbeat_sound_event":127}[value] || value)
+          return (ctx.varint)({"flags":0,"health":1,"variant":2,"color":3,"nametag":4,"owner_eid":5,"target_eid":6,"air":7,"potion_color":8,"potion_ambient":9,"jump_duration":10,"hurt_time":11,"hurt_direction":12,"paddle_time_left":13,"paddle_time_right":14,"experience_value":15,"minecart_display_block":16,"minecart_display_offset":17,"minecart_has_display":18,"old_swell":20,"swell_dir":21,"charge_amount":22,"enderman_held_runtime_id":23,"entity_age":24,"player_flags":26,"player_index":27,"player_bed_position":28,"fireball_power_x":29,"fireball_power_y":30,"fireball_power_z":31,"aux_power":32,"fish_x":33,"fish_z":34,"fish_angle":35,"potion_aux_value":36,"lead_holder_eid":37,"scale":38,"interactive_tag":39,"npc_skin_id":40,"url_tag":41,"max_airdata_max_air":42,"mark_variant":43,"container_type":44,"container_base_size":45,"container_extra_slots_per_strength":46,"block_target":47,"wither_invulnerable_ticks":48,"wither_target_1":49,"wither_target_2":50,"wither_target_3":51,"aerial_attack":52,"boundingbox_width":53,"boundingbox_height":54,"fuse_length":55,"rider_seat_position":56,"rider_rotation_locked":57,"rider_max_rotation":58,"rider_min_rotation":59,"rider_rotation_offset":60,"area_effect_cloud_radius":61,"area_effect_cloud_waiting":62,"area_effect_cloud_particle_id":63,"shulker_peek_id":64,"shulker_attach_face":65,"shulker_attached":66,"shulker_attach_pos":67,"trading_player_eid":68,"trading_career":69,"has_command_block":70,"command_block_command":71,"command_block_last_output":72,"command_block_track_output":73,"controlling_rider_seat_number":74,"strength":75,"max_strength":76,"spell_casting_color":77,"limited_life":78,"armor_stand_pose_index":79,"ender_crystal_time_offset":80,"always_show_nametag":81,"color_2":82,"name_author":83,"score_tag":84,"balloon_attached_entity":85,"pufferfish_size":86,"bubble_time":87,"agent":88,"sitting_amount":89,"sitting_amount_previous":90,"eating_counter":91,"flags_extended":92,"laying_amount":93,"laying_amount_previous":94,"duration":95,"spawn_time":96,"change_rate":97,"change_on_pickup":98,"pickup_count":99,"interact_text":100,"trade_tier":101,"max_trade_tier":102,"trade_experience":103,"skin_id":104,"spawning_frames":105,"command_block_tick_delay":106,"command_block_execute_on_first_tick":107,"ambient_sound_interval":108,"ambient_sound_interval_range":109,"ambient_sound_event_name":110,"fall_damage_multiplier":111,"name_raw_text":112,"can_ride_target":113,"low_tier_cured_discount":114,"high_tier_cured_discount":115,"nearby_cured_discount":116,"nearby_cured_discount_timestamp":117,"hitbox":118,"is_buoyant":119,"base_runtime_id":120,"freezing_effect_strength":121,"buoyancy_data":122,"goat_horn_count":123,"update_properties":124,"movement_sound_distance_offset":125,"heartbeat_interval_ticks":126,"heartbeat_sound_event":127,"player_last_death_position":128,"player_last_death_dimension":129,"player_has_died":130,"collision_box":131}[value] || value)
         })(key)
         let type1 = value.type
         size += ((value) => {
@@ -613,11 +613,11 @@
         return (ctx.varint)({"click_block":0,"click_air":1,"break_block":2}[value] || value)
       })(action_type)
       let block_position = value.block_position
-      size += (ctx.vec3i)(block_position)
+      size += (ctx.BlockCoordinates)(block_position)
       let face = value.face
-      size += (ctx.varint)(face)
+      size += (ctx.zigzag32)(face)
       let hotbar_slot = value.hotbar_slot
-      size += (ctx.varint)(hotbar_slot)
+      size += (ctx.zigzag32)(hotbar_slot)
       let held_item = value.held_item
       size += (ctx.Item)(held_item)
       let player_pos = value.player_pos
@@ -1335,7 +1335,7 @@
       return size
     },
     Action: (value) => {
-      return (ctx.zigzag32)({"start_break":0,"abort_break":1,"stop_break":2,"get_updated_block":3,"drop_item":4,"start_sleeping":5,"stop_sleeping":6,"respawn":7,"jump":8,"start_sprint":9,"stop_sprint":10,"start_sneak":11,"stop_sneak":12,"creative_player_destroy_block":13,"dimension_change_ack":14,"start_glide":15,"stop_glide":16,"build_denied":17,"crack_break":18,"change_skin":19,"set_enchatnment_seed":20,"swimming":21,"stop_swimming":22,"start_spin_attack":23,"stop_spin_attack":24,"interact_block":25,"predict_break":26,"continue_break":27,"start_item_use_on":28,"stop_item_use_on":29,"handled_teleport":30}[value] || value)
+      return (ctx.zigzag32)({"start_break":0,"abort_break":1,"stop_break":2,"get_updated_block":3,"drop_item":4,"start_sleeping":5,"stop_sleeping":6,"respawn":7,"jump":8,"start_sprint":9,"stop_sprint":10,"start_sneak":11,"stop_sneak":12,"creative_player_destroy_block":13,"dimension_change_ack":14,"start_glide":15,"stop_glide":16,"build_denied":17,"crack_break":18,"change_skin":19,"set_enchatnment_seed":20,"swimming":21,"stop_swimming":22,"start_spin_attack":23,"stop_spin_attack":24,"interact_block":25,"predict_break":26,"continue_break":27,"start_item_use_on":28,"stop_item_use_on":29,"handled_teleport":30,"missed_swing":31,"start_crawling":32,"stop_crawling":33}[value] || value)
     },
     StackRequestSlotInfo: (value) => {
       let size = 0
@@ -1350,7 +1350,7 @@
     ItemStackRequest: (value) => {
       let size = 0
       let request_id = value.request_id
-      size += (ctx.varint)(request_id)
+      size += (ctx.zigzag32)(request_id)
       let actions = value.actions
       size += ((value) => {
         let size = (ctx.varint)(value.length)
@@ -1546,7 +1546,7 @@
           return (ctx.u8)({"ok":0,"error":1}[value] || value)
         })(status)
         let request_id1 = value.request_id
-        size += (ctx.varint)(request_id1)
+        size += (ctx.zigzag32)(request_id1)
         let containers = value.containers
         size += ((value) => {
           switch (status) {
@@ -1570,7 +1570,7 @@
                     let count1 = value.count
                     size += (ctx.u8)(count1)
                     let item_stack_id = value.item_stack_id
-                    size += (ctx.varint)(item_stack_id)
+                    size += (ctx.zigzag32)(item_stack_id)
                     let custom_name = value.custom_name
                     size += (ctx.string)(custom_name)
                     let durability_correction = value.durability_correction
@@ -1810,7 +1810,7 @@
       let size = 0
       let name = value.name
       size += ((value) => {
-        return (ctx.varint)({"login":1,"play_status":2,"server_to_client_handshake":3,"client_to_server_handshake":4,"disconnect":5,"resource_packs_info":6,"resource_pack_stack":7,"resource_pack_client_response":8,"text":9,"set_time":10,"start_game":11,"add_player":12,"add_entity":13,"remove_entity":14,"add_item_entity":15,"take_item_entity":17,"move_entity":18,"move_player":19,"rider_jump":20,"update_block":21,"add_painting":22,"tick_sync":23,"level_sound_event_old":24,"level_event":25,"block_event":26,"entity_event":27,"mob_effect":28,"update_attributes":29,"inventory_transaction":30,"mob_equipment":31,"mob_armor_equipment":32,"interact":33,"block_pick_request":34,"entity_pick_request":35,"player_action":36,"hurt_armor":38,"set_entity_data":39,"set_entity_motion":40,"set_entity_link":41,"set_health":42,"set_spawn_position":43,"animate":44,"respawn":45,"container_open":46,"container_close":47,"player_hotbar":48,"inventory_content":49,"inventory_slot":50,"container_set_data":51,"crafting_data":52,"crafting_event":53,"gui_data_pick_item":54,"adventure_settings":55,"block_entity_data":56,"player_input":57,"level_chunk":58,"set_commands_enabled":59,"set_difficulty":60,"change_dimension":61,"set_player_game_type":62,"player_list":63,"simple_event":64,"event":65,"spawn_experience_orb":66,"clientbound_map_item_data":67,"map_info_request":68,"request_chunk_radius":69,"chunk_radius_update":70,"item_frame_drop_item":71,"game_rules_changed":72,"camera":73,"boss_event":74,"show_credits":75,"available_commands":76,"command_request":77,"command_block_update":78,"command_output":79,"update_trade":80,"update_equipment":81,"resource_pack_data_info":82,"resource_pack_chunk_data":83,"resource_pack_chunk_request":84,"transfer":85,"play_sound":86,"stop_sound":87,"set_title":88,"add_behavior_tree":89,"structure_block_update":90,"show_store_offer":91,"purchase_receipt":92,"player_skin":93,"sub_client_login":94,"initiate_web_socket_connection":95,"set_last_hurt_by":96,"book_edit":97,"npc_request":98,"photo_transfer":99,"modal_form_request":100,"modal_form_response":101,"server_settings_request":102,"server_settings_response":103,"show_profile":104,"set_default_game_type":105,"remove_objective":106,"set_display_objective":107,"set_score":108,"lab_table":109,"update_block_synced":110,"move_entity_delta":111,"set_scoreboard_identity":112,"set_local_player_as_initialized":113,"update_soft_enum":114,"network_stack_latency":115,"script_custom_event":117,"spawn_particle_effect":118,"available_entity_identifiers":119,"level_sound_event_v2":120,"network_chunk_publisher_update":121,"biome_definition_list":122,"level_sound_event":123,"level_event_generic":124,"lectern_update":125,"video_stream_connect":126,"add_ecs_entity":127,"remove_ecs_entity":128,"client_cache_status":129,"on_screen_texture_animation":130,"map_create_locked_copy":131,"structure_template_data_export_request":132,"structure_template_data_export_response":133,"update_block_properties":134,"client_cache_blob_status":135,"client_cache_miss_response":136,"education_settings":137,"emote":138,"multiplayer_settings":139,"settings_command":140,"anvil_damage":141,"completed_using_item":142,"network_settings":143,"player_auth_input":144,"creative_content":145,"player_enchant_options":146,"item_stack_request":147,"item_stack_response":148,"player_armor_damage":149,"update_player_game_type":151,"emote_list":152,"position_tracking_db_broadcast":153,"position_tracking_db_request":154,"packet_violation_warning":156,"motion_prediction_hints":157,"animate_entity":158,"camera_shake":159,"player_fog":160,"correct_player_move_prediction":161,"item_component":162,"filter_text_packet":163,"debug_renderer":164,"sync_entity_property":165,"add_volume_entity":166,"remove_volume_entity":167,"simulation_type":168,"npc_dialogue":169,"edu_uri_resource_packet":170,"create_photo":171,"update_subchunk_blocks":172,"photo_info_request":173,"subchunk":174,"subchunk_request":175,"client_start_item_cooldown":176,"script_message":177,"code_builder_source":178,"ticking_areas_load_status":179,"dimension_data":180,"agent_action":181,"change_mob_property":182,"lesson_progress":183,"request_ability":184,"request_permissions":185,"toast_request":186,"update_abilities":187,"update_adventure_settings":188,"death_info":189,"editor_network":190,"feature_registry":191,"server_stats":192,"request_network_settings":193,"game_test_request":194,"game_test_results":195,"update_client_input_locks":196,"client_cheat_ability":197,"camera_presets":198,"unlocked_recipes":199,"camera_instruction":300,"compressed_biome_definitions":301,"trim_data":302,"open_sign":303}[value] || value)
+        return (ctx.varint)({"login":1,"play_status":2,"server_to_client_handshake":3,"client_to_server_handshake":4,"disconnect":5,"resource_packs_info":6,"resource_pack_stack":7,"resource_pack_client_response":8,"text":9,"set_time":10,"start_game":11,"add_player":12,"add_entity":13,"remove_entity":14,"add_item_entity":15,"take_item_entity":17,"move_entity":18,"move_player":19,"rider_jump":20,"update_block":21,"add_painting":22,"tick_sync":23,"level_sound_event_old":24,"level_event":25,"block_event":26,"entity_event":27,"mob_effect":28,"update_attributes":29,"inventory_transaction":30,"mob_equipment":31,"mob_armor_equipment":32,"interact":33,"block_pick_request":34,"entity_pick_request":35,"player_action":36,"hurt_armor":38,"set_entity_data":39,"set_entity_motion":40,"set_entity_link":41,"set_health":42,"set_spawn_position":43,"animate":44,"respawn":45,"container_open":46,"container_close":47,"player_hotbar":48,"inventory_content":49,"inventory_slot":50,"container_set_data":51,"crafting_data":52,"crafting_event":53,"gui_data_pick_item":54,"adventure_settings":55,"block_entity_data":56,"player_input":57,"level_chunk":58,"set_commands_enabled":59,"set_difficulty":60,"change_dimension":61,"set_player_game_type":62,"player_list":63,"simple_event":64,"event":65,"spawn_experience_orb":66,"clientbound_map_item_data":67,"map_info_request":68,"request_chunk_radius":69,"chunk_radius_update":70,"item_frame_drop_item":71,"game_rules_changed":72,"camera":73,"boss_event":74,"show_credits":75,"available_commands":76,"command_request":77,"command_block_update":78,"command_output":79,"update_trade":80,"update_equipment":81,"resource_pack_data_info":82,"resource_pack_chunk_data":83,"resource_pack_chunk_request":84,"transfer":85,"play_sound":86,"stop_sound":87,"set_title":88,"add_behavior_tree":89,"structure_block_update":90,"show_store_offer":91,"purchase_receipt":92,"player_skin":93,"sub_client_login":94,"initiate_web_socket_connection":95,"set_last_hurt_by":96,"book_edit":97,"npc_request":98,"photo_transfer":99,"modal_form_request":100,"modal_form_response":101,"server_settings_request":102,"server_settings_response":103,"show_profile":104,"set_default_game_type":105,"remove_objective":106,"set_display_objective":107,"set_score":108,"lab_table":109,"update_block_synced":110,"move_entity_delta":111,"set_scoreboard_identity":112,"set_local_player_as_initialized":113,"update_soft_enum":114,"network_stack_latency":115,"script_custom_event":117,"spawn_particle_effect":118,"available_entity_identifiers":119,"level_sound_event_v2":120,"network_chunk_publisher_update":121,"biome_definition_list":122,"level_sound_event":123,"level_event_generic":124,"lectern_update":125,"video_stream_connect":126,"add_ecs_entity":127,"remove_ecs_entity":128,"client_cache_status":129,"on_screen_texture_animation":130,"map_create_locked_copy":131,"structure_template_data_export_request":132,"structure_template_data_export_response":133,"update_block_properties":134,"client_cache_blob_status":135,"client_cache_miss_response":136,"education_settings":137,"emote":138,"multiplayer_settings":139,"settings_command":140,"anvil_damage":141,"completed_using_item":142,"network_settings":143,"player_auth_input":144,"creative_content":145,"player_enchant_options":146,"item_stack_request":147,"item_stack_response":148,"player_armor_damage":149,"update_player_game_type":151,"emote_list":152,"position_tracking_db_broadcast":153,"position_tracking_db_request":154,"packet_violation_warning":156,"motion_prediction_hints":157,"animate_entity":158,"camera_shake":159,"player_fog":160,"correct_player_move_prediction":161,"item_component":162,"filter_text_packet":163,"debug_renderer":164,"sync_entity_property":165,"add_volume_entity":166,"remove_volume_entity":167,"simulation_type":168,"npc_dialogue":169,"edu_uri_resource_packet":170,"create_photo":171,"update_subchunk_blocks":172,"photo_info_request":173,"subchunk":174,"subchunk_request":175,"client_start_item_cooldown":176,"script_message":177,"code_builder_source":178,"ticking_areas_load_status":179,"dimension_data":180,"agent_action":181,"change_mob_property":182,"lesson_progress":183,"request_ability":184,"request_permissions":185,"toast_request":186,"update_abilities":187,"update_adventure_settings":188,"death_info":189,"editor_network":190,"feature_registry":191,"server_stats":192,"request_network_settings":193,"game_test_request":194,"game_test_results":195,"update_client_input_locks":196,"client_cheat_ability":197,"camera_presets":198,"unlocked_recipes":199,"camera_instruction":300,"compressed_biome_definitions":301,"trim_data":302,"open_sign":303,"agent_animation":304}[value] || value)
       })(name)
       let params = value.params
       size += ((value) => {
@@ -2013,6 +2013,7 @@
           case "compressed_biome_definitions": return (ctx.packet_compressed_biome_definitions)(value)
           case "trim_data": return (ctx.packet_trim_data)(value)
           case "open_sign": return (ctx.packet_open_sign)(value)
+          case "agent_animation": return (ctx.packet_agent_animation)(value)
           default: return (ctx.void)(value)
         }
       })(params)
@@ -2587,7 +2588,7 @@
       size += (ctx.varint64)(runtime_entity_id)
       let event_id = value.event_id
       size += ((value) => {
-        return (ctx.u8)({"jump":1,"hurt_animation":2,"death_animation":3,"arm_swing":4,"stop_attack":5,"tame_fail":6,"tame_success":7,"shake_wet":8,"use_item":9,"eat_grass_animation":10,"fish_hook_bubble":11,"fish_hook_position":12,"fish_hook_hook":13,"fish_hook_tease":14,"squid_ink_cloud":15,"zombie_villager_cure":16,"respawn":18,"iron_golem_offer_flower":19,"iron_golem_withdraw_flower":20,"love_particles":21,"villager_angry":22,"villager_happy":23,"witch_spell_particles":24,"firework_particles":25,"in_love_particles":26,"silverfish_spawn_animation":27,"guardian_attack":28,"witch_drink_potion":29,"witch_throw_potion":30,"minecart_tnt_prime_fuse":31,"creeper_prime_fuse":32,"air_supply_expired":33,"player_add_xp_levels":34,"elder_guardian_curse":35,"agent_arm_swing":36,"ender_dragon_death":37,"dust_particles":38,"arrow_shake":39,"eating_item":57,"baby_animal_feed":60,"death_smoke_cloud":61,"complete_trade":62,"remove_leash":63,"caravan":64,"consume_totem":65,"player_check_treasure_hunter_achievement":66,"entity_spawn":67,"dragon_puke":68,"item_entity_merge":69,"start_swim":70,"balloon_pop":71,"treasure_hunt":72,"agent_summon":73,"charged_crossbow":74,"fall":75,"grow_up":76,"vibration_detected":77,"drink_milk":78}[value] || value)
+        return (ctx.u8)({"jump":1,"hurt_animation":2,"death_animation":3,"arm_swing":4,"stop_attack":5,"tame_fail":6,"tame_success":7,"shake_wet":8,"use_item":9,"eat_grass_animation":10,"fish_hook_bubble":11,"fish_hook_position":12,"fish_hook_hook":13,"fish_hook_tease":14,"squid_ink_cloud":15,"zombie_villager_cure":16,"respawn":18,"iron_golem_offer_flower":19,"iron_golem_withdraw_flower":20,"love_particles":21,"villager_angry":22,"villager_happy":23,"witch_spell_particles":24,"firework_particles":25,"in_love_particles":26,"silverfish_spawn_animation":27,"guardian_attack":28,"witch_drink_potion":29,"witch_throw_potion":30,"minecart_tnt_prime_fuse":31,"creeper_prime_fuse":32,"air_supply_expired":33,"player_add_xp_levels":34,"elder_guardian_curse":35,"agent_arm_swing":36,"ender_dragon_death":37,"dust_particles":38,"arrow_shake":39,"eating_item":57,"baby_animal_feed":60,"death_smoke_cloud":61,"complete_trade":62,"remove_leash":63,"caravan":64,"consume_totem":65,"player_check_treasure_hunter_achievement":66,"entity_spawn":67,"dragon_puke":68,"item_entity_merge":69,"start_swim":70,"balloon_pop":71,"treasure_hunt":72,"agent_summon":73,"charged_item":74,"fall":75,"grow_up":76,"vibration_detected":77,"drink_milk":78}[value] || value)
       })(event_id)
       let data = value.data
       size += (ctx.zigzag32)(data)
@@ -3279,6 +3280,14 @@
         }
         return size
       })(enum_values)
+      let chained_subcommand_values = value.chained_subcommand_values
+      size += ((value) => {
+        let size = (ctx.varint)(value.length)
+        for (let i = 0; i < value.length; i++) {
+          size += (ctx.string)(value[i])
+        }
+        return size
+      })(chained_subcommand_values)
       let suffixes = value.suffixes
       size += ((value) => {
         let size = (ctx.varint)(value.length)
@@ -3315,6 +3324,34 @@
         }
         return size
       })(enums)
+      let chained_subcommands = value.chained_subcommands
+      size += ((value) => {
+        let size = (ctx.varint)(value.length)
+        for (let i = 0; i < value.length; i++) {
+          size += ((value) => {
+          let size = 0
+          let name1 = value.name
+          size += (ctx.string)(name1)
+          let values = value.values
+          size += ((value) => {
+            let size = (ctx.varint)(value.length)
+            for (let i = 0; i < value.length; i++) {
+              size += ((value) => {
+              let size = 0
+              let index = value.index
+              size += (ctx.lu16)(index)
+              let value2 = value.value
+              size += (ctx.lu16)(value2)
+              return size
+            })(value[i])
+            }
+            return size
+          })(values)
+          return size
+        })(value[i])
+        }
+        return size
+      })(chained_subcommands)
       let command_data = value.command_data
       size += ((value) => {
         let size = (ctx.varint)(value.length)
@@ -3331,32 +3368,47 @@
           size += (ctx.u8)(permission_level1)
           let alias = value.alias
           size += (ctx.li32)(alias)
+          let chained_subcommand_offsets = value.chained_subcommand_offsets
+          size += ((value) => {
+            let size = (ctx.varint)(value.length)
+            for (let i = 0; i < value.length; i++) {
+              size += (ctx.lu16)(value[i])
+            }
+            return size
+          })(chained_subcommand_offsets)
           let overloads = value.overloads
           size += ((value) => {
             let size = (ctx.varint)(value.length)
             for (let i = 0; i < value.length; i++) {
               size += ((value) => {
-              let size = (ctx.varint)(value.length)
-              for (let i = 0; i < value.length; i++) {
-                size += ((value) => {
-                let size = 0
-                let parameter_name = value.parameter_name
-                size += (ctx.string)(parameter_name)
-                let value_type = value.value_type
-                size += ((value) => {
-                  return (ctx.lu16)({"int":1,"float":3,"value":4,"wildcard_int":5,"operator":6,"command_operator":7,"target":8,"wildcard_target":10,"file_path":17,"integer_range":23,"equipment_slots":43,"string":44,"block_position":52,"position":53,"message":55,"raw_text":58,"json":62,"block_states":71,"command":74}[value] || value)
-                })(value_type)
-                let enum_type = value.enum_type
-                size += ((value) => {
-                  return (ctx.lu16)({"valid":16,"enum":32,"suffixed":256,"soft_enum":1024}[value] || value)
-                })(enum_type)
-                let optional = value.optional
-                size += (ctx.bool)(optional)
-                let options = value.options
-                size += (ctx.CommandFlags)(options)
+              let size = 0
+              let chaining = value.chaining
+              size += (ctx.bool)(chaining)
+              let parameters1 = value.parameters
+              size += ((value) => {
+                let size = (ctx.varint)(value.length)
+                for (let i = 0; i < value.length; i++) {
+                  size += ((value) => {
+                  let size = 0
+                  let parameter_name = value.parameter_name
+                  size += (ctx.string)(parameter_name)
+                  let value_type = value.value_type
+                  size += ((value) => {
+                    return (ctx.lu16)({"int":1,"float":3,"value":4,"wildcard_int":5,"operator":6,"command_operator":7,"target":8,"wildcard_target":10,"file_path":17,"integer_range":23,"equipment_slots":43,"string":44,"block_position":52,"position":53,"message":55,"raw_text":58,"json":62,"block_states":71,"command":74}[value] || value)
+                  })(value_type)
+                  let enum_type = value.enum_type
+                  size += ((value) => {
+                    return (ctx.lu16)({"valid":16,"enum":48,"suffixed":256,"soft_enum":1040}[value] || value)
+                  })(enum_type)
+                  let optional = value.optional
+                  size += (ctx.bool)(optional)
+                  let options = value.options
+                  size += (ctx.CommandFlags)(options)
+                  return size
+                })(value[i])
+                }
                 return size
-              })(value[i])
-              }
+              })(parameters1)
               return size
             })(value[i])
             }
@@ -4099,6 +4151,20 @@
     },
     packet_update_soft_enum: (value) => {
       let size = 0
+      let enum_type = value.enum_type
+      size += (ctx.string)(enum_type)
+      let options = value.options
+      size += ((value) => {
+        let size = (ctx.varint)(value.length)
+        for (let i = 0; i < value.length; i++) {
+          size += (ctx.string)(value[i])
+        }
+        return size
+      })(options)
+      let action_type = value.action_type
+      size += ((value) => {
+        return (ctx.u8)({"add":0,"remove":1,"update":2}[value] || value)
+      })(action_type)
       return size
     },
     packet_network_stack_latency: (value) => {
@@ -4387,6 +4453,16 @@
       let external_link_settings = value.external_link_settings
       size += ((value) => {
         switch (has_external_link_settings) {
+          case true: return ((value) => {
+            let size = 0
+            let has = value.has
+            size += (ctx.bool)(has)
+            let url1 = value.url
+            size += (ctx.string)(url1)
+            let display_name1 = value.display_name
+            size += (ctx.string)(display_name1)
+            return size
+          })(value)
           default: return (ctx.void)(value)
         }
       })(external_link_settings)
@@ -4438,7 +4514,7 @@
       size += (ctx.li16)(used_item_id)
       let use_method = value.use_method
       size += ((value) => {
-        return (ctx.li32)({"equip_armor":0,"eat":1,"attack":2,"consume":3,"throw":4,"shoot":5,"place":6,"fill_bottle":7,"fill_bucket":8,"pour_bucket":9,"use_tool":10,"interact":11,"retrieved":12,"dyed":13,"traded":14}[value] || value)
+        return (ctx.li32)({"equip_armor":0,"eat":1,"attack":2,"consume":3,"throw":4,"shoot":5,"place":6,"fill_bottle":7,"fill_bucket":8,"pour_bucket":9,"use_tool":10,"interact":11,"retrieved":12,"dyed":13,"traded":14,"brushing_completed":15}[value] || value)
       })(use_method)
       return size
     },
@@ -4531,11 +4607,11 @@
               let position1 = value.position
               size += ((value) => {
                 switch (action1) {
-                  case "start_break": return (ctx.BlockCoordinates)(value)
-                  case "abort_break": return (ctx.BlockCoordinates)(value)
-                  case "crack_break": return (ctx.BlockCoordinates)(value)
-                  case "predict_break": return (ctx.BlockCoordinates)(value)
-                  case "continue_break": return (ctx.BlockCoordinates)(value)
+                  case "start_break": return (ctx.vec3i)(value)
+                  case "abort_break": return (ctx.vec3i)(value)
+                  case "crack_break": return (ctx.vec3i)(value)
+                  case "predict_break": return (ctx.vec3i)(value)
+                  case "continue_break": return (ctx.vec3i)(value)
                   default: return (ctx.void)(value)
                 }
               })(position1)
@@ -5440,6 +5516,16 @@
       size += (ctx.bool)(is_front)
       return size
     },
+    packet_agent_animation: (value) => {
+      let size = 0
+      let animation = value.animation
+      size += ((value) => {
+        return (ctx.u8)({"arm_swing":0,"shrug":1}[value] || value)
+      })(animation)
+      let entity_runtime_id = value.entity_runtime_id
+      size += (ctx.varint64)(entity_runtime_id)
+      return size
+    },
     string: (value) => {
       let size = Buffer.byteLength(value, "utf8")
       size += (ctx.varint)(size)
@@ -5479,7 +5565,7 @@
           return (ctx.zigzag64)(val)
     },
     MetadataFlags2: (value) => {
-      const flags = {"sneezing": 1n,"trusting": 2n,"rolling": 4n,"scared": 8n,"in_scaffolding": 16n,"over_scaffolding": 32n,"fall_through_scaffolding": 64n,"blocking": 128n,"transition_blocking": 256n,"blocked_using_shield": 512n,"blocked_using_damaged_shield": 1024n,"sleeping": 2048n,"wants_to_wake": 4096n,"trade_interest": 8192n,"door_breaker": 16384n,"breaking_obstruction": 32768n,"door_opener": 65536n,"illager_captain": 131072n,"stunned": 262144n,"roaring": 524288n,"delayed_attacking": 1048576n,"avoiding_mobs": 2097152n,"avoiding_block": 4194304n,"facing_target_to_range_attack": 8388608n,"hidden_when_invisible": 16777216n,"is_in_ui": 33554432n,"stalking": 67108864n,"emoting": 134217728n,"celebrating": 268435456n,"admiring": 536870912n,"celebrating_special": 1073741824n,"unknown95": 2147483648n,"ram_attack": 4294967296n,"playing_dead": 8589934592n,"in_ascendable_block": 17179869184n,"over_descendable_block": 34359738368n,"croaking": 68719476736n,"eat_mob": 137438953472n,"jump_goal_jump": 274877906944n,"emerging": 549755813888n,"sniffing": 1099511627776n,"digging": 2199023255552n,"sonic_boom": 4398046511104n,"has_dash_cooldown": 8796093022208n,"push_towards_closest_space": 17592186044416n,"scenting": 35184372088832n,"rising": 70368744177664n,"feeling_happy": 140737488355328n,"searching": 281474976710656n,}
+      const flags = {"sneezing": 1n,"trusting": 2n,"rolling": 4n,"scared": 8n,"in_scaffolding": 16n,"over_scaffolding": 32n,"fall_through_scaffolding": 64n,"blocking": 128n,"transition_blocking": 256n,"blocked_using_shield": 512n,"blocked_using_damaged_shield": 1024n,"sleeping": 2048n,"wants_to_wake": 4096n,"trade_interest": 8192n,"door_breaker": 16384n,"breaking_obstruction": 32768n,"door_opener": 65536n,"illager_captain": 131072n,"stunned": 262144n,"roaring": 524288n,"delayed_attacking": 1048576n,"avoiding_mobs": 2097152n,"avoiding_block": 4194304n,"facing_target_to_range_attack": 8388608n,"hidden_when_invisible": 16777216n,"is_in_ui": 33554432n,"stalking": 67108864n,"emoting": 134217728n,"celebrating": 268435456n,"admiring": 536870912n,"celebrating_special": 1073741824n,"unknown95": 2147483648n,"ram_attack": 4294967296n,"playing_dead": 8589934592n,"in_ascendable_block": 17179869184n,"over_descendable_block": 34359738368n,"croaking": 68719476736n,"eat_mob": 137438953472n,"jump_goal_jump": 274877906944n,"emerging": 549755813888n,"sniffing": 1099511627776n,"digging": 2199023255552n,"sonic_boom": 4398046511104n,"has_dash_cooldown": 8796093022208n,"push_towards_closest_space": 17592186044416n,"scenting": 35184372088832n,"rising": 70368744177664n,"feeling_happy": 140737488355328n,"searching": 281474976710656n,"crawling": 562949953421312n,}
           let val = value._value || 0n
           for (const key in flags) {
             if (value[key]) val |= flags[key]
@@ -5538,7 +5624,7 @@
           return (ctx.lu16)(val)
     },
     InputFlag: (value) => {
-      const flags = {"ascend": 1n,"descend": 2n,"north_jump": 4n,"jump_down": 8n,"sprint_down": 16n,"change_height": 32n,"jumping": 64n,"auto_jumping_in_water": 128n,"sneaking": 256n,"sneak_down": 512n,"up": 1024n,"down": 2048n,"left": 4096n,"right": 8192n,"up_left": 16384n,"up_right": 32768n,"want_up": 65536n,"want_down": 131072n,"want_down_slow": 262144n,"want_up_slow": 524288n,"sprinting": 1048576n,"ascend_block": 2097152n,"descend_block": 4194304n,"sneak_toggle_down": 8388608n,"persist_sneak": 16777216n,"start_sprinting": 33554432n,"stop_sprinting": 67108864n,"start_sneaking": 134217728n,"stop_sneaking": 268435456n,"start_swimming": 536870912n,"stop_swimming": 1073741824n,"start_jumping": 2147483648n,"start_gliding": 4294967296n,"stop_gliding": 8589934592n,"item_interact": 17179869184n,"block_action": 34359738368n,"item_stack_request": 68719476736n,"handled_teleport": 137438953472n,"emoting": 274877906944n,}
+      const flags = {"ascend": 1n,"descend": 2n,"north_jump": 4n,"jump_down": 8n,"sprint_down": 16n,"change_height": 32n,"jumping": 64n,"auto_jumping_in_water": 128n,"sneaking": 256n,"sneak_down": 512n,"up": 1024n,"down": 2048n,"left": 4096n,"right": 8192n,"up_left": 16384n,"up_right": 32768n,"want_up": 65536n,"want_down": 131072n,"want_down_slow": 262144n,"want_up_slow": 524288n,"sprinting": 1048576n,"ascend_block": 2097152n,"descend_block": 4194304n,"sneak_toggle_down": 8388608n,"persist_sneak": 16777216n,"start_sprinting": 33554432n,"stop_sprinting": 67108864n,"start_sneaking": 134217728n,"stop_sneaking": 268435456n,"start_swimming": 536870912n,"stop_swimming": 1073741824n,"start_jumping": 2147483648n,"start_gliding": 4294967296n,"stop_gliding": 8589934592n,"item_interact": 17179869184n,"block_action": 34359738368n,"item_stack_request": 68719476736n,"handled_teleport": 137438953472n,"emoting": 274877906944n,"missed_swing": 549755813888n,"start_crawling": 1099511627776n,"stop_crawling": 2199023255552n,}
           let val = value._value || 0n
           for (const key in flags) {
             if (value[key]) val |= flags[key]
