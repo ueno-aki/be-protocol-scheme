@@ -427,6 +427,62 @@
       offset = (ctx.lf32)(z, buffer, offset)
       return offset
     },
+    Vec3fopts: (value, buffer, offset) => {
+      let x = value.x
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.lf32)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(x, buffer, offset)
+      let y = value.y
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.lf32)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(y, buffer, offset)
+      let z = value.z
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.lf32)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(z, buffer, offset)
+      return offset
+    },
+    Vec2fopts: (value, buffer, offset) => {
+      let x = value.x
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.lf32)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(x, buffer, offset)
+      let y = value.y
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.lf32)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(y, buffer, offset)
+      return offset
+    },
     MetadataDictionary: (value, buffer, offset) => {
       offset = (ctx.varint)(value.length, buffer, offset)
       for (let i = 0; i < value.length; i++) {
@@ -1712,7 +1768,7 @@
       return (ctx.u8)({"anvil_input":0,"anvil_material":1,"anvil_result":2,"smithing_table_input":3,"smithing_table_material":4,"smithing_table_result":5,"armor":6,"container":7,"beacon_payment":8,"brewing_input":9,"brewing_result":10,"brewing_fuel":11,"hotbar_and_inventory":12,"crafting_input":13,"crafting_output":14,"recipe_construction":15,"recipe_nature":16,"recipe_items":17,"recipe_search":18,"recipe_search_bar":19,"recipe_equipment":20,"recipe_book":21,"enchanting_input":22,"enchanting_lapis":23,"furnace_fuel":24,"furnace_ingredient":25,"furnace_output":26,"horse_equip":27,"hotbar":28,"inventory":29,"shulker":30,"trade_ingredient1":31,"trade_ingredient2":32,"trade_result":33,"offhand":34,"compcreate_input":35,"compcreate_output":36,"elemconstruct_output":37,"matreduce_input":38,"matreduce_output":39,"labtable_input":40,"loom_input":41,"loom_dye":42,"loom_material":43,"loom_result":44,"blast_furnace_ingredient":45,"smoker_ingredient":46,"trade2_ingredient1":47,"trade2_ingredient2":48,"trade2_result":49,"grindstone_input":50,"grindstone_additional":51,"grindstone_result":52,"stonecutter_input":53,"stonecutter_result":54,"cartography_input":55,"cartography_additional":56,"cartography_result":57,"barrel":58,"cursor":59,"creative_output":60,"smithing_table_template":61}[value] || value, buffer, offset)
     },
     SoundType: (value, buffer, offset) => {
-      return (ctx.varint)({"ItemUseOn":0,"Hit":1,"Step":2,"Fly":3,"Jump":4,"Break":5,"Place":6,"HeavyStep":7,"Gallop":8,"Fall":9,"Ambient":10,"AmbientBaby":11,"AmbientInWater":12,"Breathe":13,"Death":14,"DeathInWater":15,"DeathToZombie":16,"Hurt":17,"HurtInWater":18,"Mad":19,"Boost":20,"Bow":21,"SquishBig":22,"SquishSmall":23,"FallBig":24,"FallSmall":25,"Splash":26,"Fizz":27,"Flap":28,"Swim":29,"Drink":30,"Eat":31,"Takeoff":32,"Shake":33,"Plop":34,"Land":35,"Saddle":36,"Armor":37,"MobArmorStandPlace":38,"AddChest":39,"Throw":40,"Attack":41,"AttackNoDamage":42,"AttackStrong":43,"Warn":44,"Shear":45,"Milk":46,"Thunder":47,"Explode":48,"Fire":49,"Ignite":50,"Fuse":51,"Stare":52,"Spawn":53,"Shoot":54,"BreakBlock":55,"Launch":56,"Blast":57,"LargeBlast":58,"Twinkle":59,"Remedy":60,"Infect":61,"LevelUp":62,"BowHit":63,"BulletHit":64,"ExtinguishFire":65,"ItemFizz":66,"ChestOpen":67,"ChestClosed":68,"ShulkerBoxOpen":69,"ShulkerBoxClosed":70,"EnderChestOpen":71,"EnderChestClosed":72,"PowerOn":73,"PowerOff":74,"Attach":75,"Detach":76,"Deny":77,"Tripod":78,"Pop":79,"DropSlot":80,"Note":81,"Thorns":82,"PistonIn":83,"PistonOut":84,"Portal":85,"Water":86,"LavaPop":87,"Lava":88,"Burp":89,"BucketFillWater":90,"BucketFillLava":91,"BucketEmptyWater":92,"BucketEmptyLava":93,"ArmorEquipChain":94,"ArmorEquipDiamond":95,"ArmorEquipGeneric":96,"ArmorEquipGold":97,"ArmorEquipIron":98,"ArmorEquipLeather":99,"ArmorEquipElytra":100,"Record13":101,"RecordCat":102,"RecordBlocks":103,"RecordChirp":104,"RecordFar":105,"RecordMall":106,"RecordMellohi":107,"RecordStal":108,"RecordStrad":109,"RecordWard":110,"Record11":111,"RecordWait":112,"StopRecord":113,"Flop":114,"GuardianCurse":115,"MobWarning":116,"MobWarningBaby":117,"Teleport":118,"ShulkerOpen":119,"ShulkerClose":120,"Haggle":121,"HaggleYes":122,"HaggleNo":123,"HaggleIdle":124,"ChorusGrow":125,"ChorusDeath":126,"Glass":127,"PotionBrewed":128,"CastSpell":129,"PrepareAttackSpell":130,"PrepareSummon":131,"PrepareWololo":132,"Fang":133,"Charge":134,"CameraTakePicture":135,"LeashKnotPlace":136,"LeashKnotBreak":137,"AmbientGrowl":138,"AmbientWhine":139,"AmbientPant":140,"AmbientPurr":141,"AmbientPurreow":142,"DeathMinVolume":143,"DeathMidVolume":144,"ImitateBlaze":145,"ImitateCaveSpider":146,"ImitateCreeper":147,"ImitateElderGuardian":148,"ImitateEnderDragon":149,"ImitateEnderman":150,"ImitateEndermite":151,"ImitateEvocationIllager":152,"ImitateGhast":153,"ImitateHusk":154,"ImitateIllusionIllager":155,"ImitateMagmaCube":156,"ImitatePolarBear":157,"ImitateShulker":158,"ImitateSilverfish":159,"ImitateSkeleton":160,"ImitateSlime":161,"ImitateSpider":162,"ImitateStray":163,"ImitateVex":164,"ImitateVindicationIllager":165,"ImitateWitch":166,"ImitateWither":167,"ImitateWitherSkeleton":168,"ImitateWolf":169,"ImitateZombie":170,"ImitateZombiePigman":171,"ImitateZombieVillager":172,"EnderEyePlaced":173,"EndPortalCreated":174,"AnvilUse":175,"BottleDragonBreath":176,"PortalTravel":177,"TridentHit":178,"TridentReturn":179,"TridentRiptide1":180,"TridentRiptide2":181,"TridentRiptide3":182,"TridentThrow":183,"TridentThunder":184,"TridentHitGround":185,"Default":186,"FletchingTableUse":187,"ElemConstructOpen":188,"IceBombHit":189,"BalloonPop":190,"LtReactionIceBomb":191,"LtReactionBleach":192,"LtReactionElephantToothpaste":193,"LtReactionElephantToothpaste2":194,"LtReactionGlowStick":195,"LtReactionGlowStick2":196,"LtReactionLuminol":197,"LtReactionSalt":198,"LtReactionFertilizer":199,"LtReactionFireball":200,"LtReactionMagnesiumSalt":201,"LtReactionMiscFire":202,"LtReactionFire":203,"LtReactionMiscExplosion":204,"LtReactionMiscMystical":205,"LtReactionMiscMystical2":206,"LtReactionProduct":207,"SparklerUse":208,"GlowStickUse":209,"SparklerActive":210,"ConvertToDrowned":211,"BucketFillFish":212,"BucketEmptyFish":213,"BubbleColumnUpwards":214,"BubbleColumnDownwards":215,"BubblePop":216,"BubbleUpInside":217,"BubbleDownInside":218,"HurtBaby":219,"DeathBaby":220,"StepBaby":221,"SpawnBaby":222,"Born":223,"TurtleEggBreak":224,"TurtleEggCrack":225,"TurtleEggHatched":226,"LayEgg":227,"TurtleEggAttacked":228,"BeaconActivate":229,"BeaconAmbient":230,"BeaconDeactivate":231,"BeaconPower":232,"ConduitActivate":233,"ConduitAmbient":234,"ConduitAttack":235,"ConduitDeactivate":236,"ConduitShort":237,"Swoop":238,"BambooSaplingPlace":239,"PreSneeze":240,"Sneeze":241,"AmbientTame":242,"Scared":243,"ScaffoldingClimb":244,"CrossbowLoadingStart":245,"CrossbowLoadingMiddle":246,"CrossbowLoadingEnd":247,"CrossbowShoot":248,"CrossbowQuickChargeStart":249,"CrossbowQuickChargeMiddle":250,"CrossbowQuickChargeEnd":251,"AmbientAggressive":252,"AmbientWorried":253,"CantBreed":254,"ShieldBlock":255,"LecternBookPlace":256,"GrindstoneUse":257,"Bell":258,"CampfireCrackle":259,"Roar":260,"Stun":261,"SweetBerryBushHurt":262,"SweetBerryBushPick":263,"CartographyTableUse":264,"StonecutterUse":265,"ComposterEmpty":266,"ComposterFill":267,"ComposterFillLayer":268,"ComposterReady":269,"BarrelOpen":270,"BarrelClose":271,"RaidHorn":272,"LoomUse":273,"AmbientInRaid":274,"UicartographyTableUse":275,"UistonecutterUse":276,"UiloomUse":277,"SmokerUse":278,"BlastFurnaceUse":279,"SmithingTableUse":280,"Screech":281,"Sleep":282,"FurnaceUse":283,"MooshroomConvert":284,"MilkSuspiciously":285,"Celebrate":286,"JumpPrevent":287,"AmbientPollinate":288,"BeehiveDrip":289,"BeehiveEnter":290,"BeehiveExit":291,"BeehiveWork":292,"BeehiveShear":293,"HoneybottleDrink":294,"AmbientCave":295,"Retreat":296,"ConvertToZombified":297,"Admire":298,"StepLava":299,"Tempt":300,"Panic":301,"Angry":302,"AmbientMoodWarpedForest":303,"AmbientMoodSoulsandValley":304,"AmbientMoodNetherWastes":305,"AmbientMoodBasaltDeltas":306,"AmbientMoodCrimsonForest":307,"RespawnAnchorCharge":308,"RespawnAnchorDeplete":309,"RespawnAnchorSetSpawn":310,"RespawnAnchorAmbient":311,"SoulEscapeQuiet":312,"SoulEscapeLoud":313,"RecordPigstep":314,"LinkCompassToLodestone":315,"UseSmithingTable":316,"EquipNetherite":317,"AmbientLoopWarpedForest":318,"AmbientLoopSoulsandValley":319,"AmbientLoopNetherWastes":320,"AmbientLoopBasaltDeltas":321,"AmbientLoopCrimsonForest":322,"AmbientAdditionWarpedForest":323,"AmbientAdditionSoulsandValley":324,"AmbientAdditionNetherWastes":325,"AmbientAdditionBasaltDeltas":326,"AmbientAdditionCrimsonForest":327,"SculkSensorPowerOn":328,"SculkSensorPowerOff":329,"BucketFillPowderSnow":330,"BucketEmptyPowderSnow":331,"PointedDripstoneCauldronDripWater":332,"PointedDripstoneCauldronDripLava":333,"PointedDripstoneDripWater":334,"PointedDripstoneDripLava":335,"CaveVinesPickBerries":336,"BigDripleafTiltDown":337,"BigDripleafTiltUp":338,"CopperWaxOn":339,"CopperWaxOff":340,"Scrape":341,"PlayerHurtDrown":342,"PlayerHurtOnFire":343,"PlayerHurtFreeze":344,"UseSpyglass":345,"StopUsingSpyglass":346,"AmethystBlockChime":347,"AmbientScreamer":348,"HurtScreamer":349,"DeathScreamer":350,"MilkScreamer":351,"JumpToBlock":352,"PreRam":353,"PreRamScreamer":354,"RamImpact":355,"RamImpactScreamer":356,"SquidInkSquirt":357,"GlowSquidInkSquirt":358,"ConvertToStray":359,"CakeAddCandle":360,"ExtinguishCandle":361,"AmbientCandle":362,"BlockClick":363,"BlockClickFail":364,"SculkCatalystBloom":365,"SculkShriekerShriek":366,"WardenNearbyClose":367,"WardenNearbyCloser":368,"WardenNearbyClosest":369,"WardenSlightlyAngry":370,"RecordOtherside":371,"Tongue":372,"CrackIronGolem":373,"RepairIronGolem":374,"Listening":375,"Heartbeat":376,"HornBreak":377,"SculkPlace":378,"SculkSpread":379,"SculkCharge":380,"SculkSensorPlace":381,"SculkShriekerPlace":382,"goat_call_0":383,"goat_call_1":384,"goat_call_2":385,"goat_call_3":386,"goat_call_4":387,"goat_call_5":388,"goat_call_6":389,"goat_call_7":390,"goat_call_8":391,"goat_call_9":392,"goat_harmony_0":393,"goat_harmony_1":394,"goat_harmony_2":395,"goat_harmony_3":396,"goat_harmony_4":397,"goat_harmony_5":398,"goat_harmony_6":399,"goat_harmony_7":400,"goat_harmony_8":401,"goat_harmony_9":402,"goat_melody_0":403,"goat_melody_1":404,"goat_melody_2":405,"goat_melody_3":406,"goat_melody_4":407,"goat_melody_5":408,"goat_melody_6":409,"goat_melody_7":410,"goat_melody_8":411,"goat_melody_9":412,"goat_bass_0":413,"goat_bass_1":414,"goat_bass_2":415,"goat_bass_3":416,"goat_bass_4":417,"goat_bass_5":418,"goat_bass_6":419,"goat_bass_7":420,"goat_bass_8":421,"goat_bass_9":422,"_":425,"ImitateWarden":426,"ListeningAngry":427,"ItemGiven":428,"ItemTaken":429,"Disappeared":430,"Reappeared":431,"DrinkMilk":442,"FrogspawnHatched":433,"LaySpawn":434,"FrogspawnBreak":435,"SonicBoom":436,"SonicCharge":437,"SoundeventItemThrown":438,"Record5":439,"ConvertToFrog":440,"RecordPlaying":443,"EnchantingTableUse":444,"StepSand":445,"DashReady":446,"BundleDropContents":447,"BundleInsert":448,"BundleRemoveOne":449,"PressurePlateClickOff":450,"PressurePlateClickOn":451,"ButtonClickOff":452,"ButtonClickOn":453,"DoorOpen":454,"DoorClose":455,"TrapdoorOpen":456,"TrapdoorClose":457,"FenceGateOpen":458,"FenceGateClose":459,"Insert":460,"Pickup":461,"InsertEnchanted":462,"PickupEnchanted":463,"Brush":464,"BrushCompleted":465,"ShatterDecoratedPot":466,"BreakDecoratedPot":467,"SnifferEggCrack":468,"SnifferEggHatched":469,"WaxedSignInteractFail":470,"RecordRelic":471}[value] || value, buffer, offset)
+      return (ctx.varint)({"ItemUseOn":0,"Hit":1,"Step":2,"Fly":3,"Jump":4,"Break":5,"Place":6,"HeavyStep":7,"Gallop":8,"Fall":9,"Ambient":10,"AmbientBaby":11,"AmbientInWater":12,"Breathe":13,"Death":14,"DeathInWater":15,"DeathToZombie":16,"Hurt":17,"HurtInWater":18,"Mad":19,"Boost":20,"Bow":21,"SquishBig":22,"SquishSmall":23,"FallBig":24,"FallSmall":25,"Splash":26,"Fizz":27,"Flap":28,"Swim":29,"Drink":30,"Eat":31,"Takeoff":32,"Shake":33,"Plop":34,"Land":35,"Saddle":36,"Armor":37,"MobArmorStandPlace":38,"AddChest":39,"Throw":40,"Attack":41,"AttackNoDamage":42,"AttackStrong":43,"Warn":44,"Shear":45,"Milk":46,"Thunder":47,"Explode":48,"Fire":49,"Ignite":50,"Fuse":51,"Stare":52,"Spawn":53,"Shoot":54,"BreakBlock":55,"Launch":56,"Blast":57,"LargeBlast":58,"Twinkle":59,"Remedy":60,"Infect":61,"LevelUp":62,"BowHit":63,"BulletHit":64,"ExtinguishFire":65,"ItemFizz":66,"ChestOpen":67,"ChestClosed":68,"ShulkerBoxOpen":69,"ShulkerBoxClosed":70,"EnderChestOpen":71,"EnderChestClosed":72,"PowerOn":73,"PowerOff":74,"Attach":75,"Detach":76,"Deny":77,"Tripod":78,"Pop":79,"DropSlot":80,"Note":81,"Thorns":82,"PistonIn":83,"PistonOut":84,"Portal":85,"Water":86,"LavaPop":87,"Lava":88,"Burp":89,"BucketFillWater":90,"BucketFillLava":91,"BucketEmptyWater":92,"BucketEmptyLava":93,"ArmorEquipChain":94,"ArmorEquipDiamond":95,"ArmorEquipGeneric":96,"ArmorEquipGold":97,"ArmorEquipIron":98,"ArmorEquipLeather":99,"ArmorEquipElytra":100,"Record13":101,"RecordCat":102,"RecordBlocks":103,"RecordChirp":104,"RecordFar":105,"RecordMall":106,"RecordMellohi":107,"RecordStal":108,"RecordStrad":109,"RecordWard":110,"Record11":111,"RecordWait":112,"StopRecord":113,"Flop":114,"GuardianCurse":115,"MobWarning":116,"MobWarningBaby":117,"Teleport":118,"ShulkerOpen":119,"ShulkerClose":120,"Haggle":121,"HaggleYes":122,"HaggleNo":123,"HaggleIdle":124,"ChorusGrow":125,"ChorusDeath":126,"Glass":127,"PotionBrewed":128,"CastSpell":129,"PrepareAttackSpell":130,"PrepareSummon":131,"PrepareWololo":132,"Fang":133,"Charge":134,"CameraTakePicture":135,"LeashKnotPlace":136,"LeashKnotBreak":137,"AmbientGrowl":138,"AmbientWhine":139,"AmbientPant":140,"AmbientPurr":141,"AmbientPurreow":142,"DeathMinVolume":143,"DeathMidVolume":144,"ImitateBlaze":145,"ImitateCaveSpider":146,"ImitateCreeper":147,"ImitateElderGuardian":148,"ImitateEnderDragon":149,"ImitateEnderman":150,"ImitateEndermite":151,"ImitateEvocationIllager":152,"ImitateGhast":153,"ImitateHusk":154,"ImitateIllusionIllager":155,"ImitateMagmaCube":156,"ImitatePolarBear":157,"ImitateShulker":158,"ImitateSilverfish":159,"ImitateSkeleton":160,"ImitateSlime":161,"ImitateSpider":162,"ImitateStray":163,"ImitateVex":164,"ImitateVindicationIllager":165,"ImitateWitch":166,"ImitateWither":167,"ImitateWitherSkeleton":168,"ImitateWolf":169,"ImitateZombie":170,"ImitateZombiePigman":171,"ImitateZombieVillager":172,"EnderEyePlaced":173,"EndPortalCreated":174,"AnvilUse":175,"BottleDragonBreath":176,"PortalTravel":177,"TridentHit":178,"TridentReturn":179,"TridentRiptide1":180,"TridentRiptide2":181,"TridentRiptide3":182,"TridentThrow":183,"TridentThunder":184,"TridentHitGround":185,"Default":186,"FletchingTableUse":187,"ElemConstructOpen":188,"IceBombHit":189,"BalloonPop":190,"LtReactionIceBomb":191,"LtReactionBleach":192,"LtReactionElephantToothpaste":193,"LtReactionElephantToothpaste2":194,"LtReactionGlowStick":195,"LtReactionGlowStick2":196,"LtReactionLuminol":197,"LtReactionSalt":198,"LtReactionFertilizer":199,"LtReactionFireball":200,"LtReactionMagnesiumSalt":201,"LtReactionMiscFire":202,"LtReactionFire":203,"LtReactionMiscExplosion":204,"LtReactionMiscMystical":205,"LtReactionMiscMystical2":206,"LtReactionProduct":207,"SparklerUse":208,"GlowStickUse":209,"SparklerActive":210,"ConvertToDrowned":211,"BucketFillFish":212,"BucketEmptyFish":213,"BubbleColumnUpwards":214,"BubbleColumnDownwards":215,"BubblePop":216,"BubbleUpInside":217,"BubbleDownInside":218,"HurtBaby":219,"DeathBaby":220,"StepBaby":221,"SpawnBaby":222,"Born":223,"TurtleEggBreak":224,"TurtleEggCrack":225,"TurtleEggHatched":226,"LayEgg":227,"TurtleEggAttacked":228,"BeaconActivate":229,"BeaconAmbient":230,"BeaconDeactivate":231,"BeaconPower":232,"ConduitActivate":233,"ConduitAmbient":234,"ConduitAttack":235,"ConduitDeactivate":236,"ConduitShort":237,"Swoop":238,"BambooSaplingPlace":239,"PreSneeze":240,"Sneeze":241,"AmbientTame":242,"Scared":243,"ScaffoldingClimb":244,"CrossbowLoadingStart":245,"CrossbowLoadingMiddle":246,"CrossbowLoadingEnd":247,"CrossbowShoot":248,"CrossbowQuickChargeStart":249,"CrossbowQuickChargeMiddle":250,"CrossbowQuickChargeEnd":251,"AmbientAggressive":252,"AmbientWorried":253,"CantBreed":254,"ShieldBlock":255,"LecternBookPlace":256,"GrindstoneUse":257,"Bell":258,"CampfireCrackle":259,"Roar":260,"Stun":261,"SweetBerryBushHurt":262,"SweetBerryBushPick":263,"CartographyTableUse":264,"StonecutterUse":265,"ComposterEmpty":266,"ComposterFill":267,"ComposterFillLayer":268,"ComposterReady":269,"BarrelOpen":270,"BarrelClose":271,"RaidHorn":272,"LoomUse":273,"AmbientInRaid":274,"UicartographyTableUse":275,"UistonecutterUse":276,"UiloomUse":277,"SmokerUse":278,"BlastFurnaceUse":279,"SmithingTableUse":280,"Screech":281,"Sleep":282,"FurnaceUse":283,"MooshroomConvert":284,"MilkSuspiciously":285,"Celebrate":286,"JumpPrevent":287,"AmbientPollinate":288,"BeehiveDrip":289,"BeehiveEnter":290,"BeehiveExit":291,"BeehiveWork":292,"BeehiveShear":293,"HoneybottleDrink":294,"AmbientCave":295,"Retreat":296,"ConvertToZombified":297,"Admire":298,"StepLava":299,"Tempt":300,"Panic":301,"Angry":302,"AmbientMoodWarpedForest":303,"AmbientMoodSoulsandValley":304,"AmbientMoodNetherWastes":305,"AmbientMoodBasaltDeltas":306,"AmbientMoodCrimsonForest":307,"RespawnAnchorCharge":308,"RespawnAnchorDeplete":309,"RespawnAnchorSetSpawn":310,"RespawnAnchorAmbient":311,"SoulEscapeQuiet":312,"SoulEscapeLoud":313,"RecordPigstep":314,"LinkCompassToLodestone":315,"UseSmithingTable":316,"EquipNetherite":317,"AmbientLoopWarpedForest":318,"AmbientLoopSoulsandValley":319,"AmbientLoopNetherWastes":320,"AmbientLoopBasaltDeltas":321,"AmbientLoopCrimsonForest":322,"AmbientAdditionWarpedForest":323,"AmbientAdditionSoulsandValley":324,"AmbientAdditionNetherWastes":325,"AmbientAdditionBasaltDeltas":326,"AmbientAdditionCrimsonForest":327,"SculkSensorPowerOn":328,"SculkSensorPowerOff":329,"BucketFillPowderSnow":330,"BucketEmptyPowderSnow":331,"PointedDripstoneCauldronDripWater":332,"PointedDripstoneCauldronDripLava":333,"PointedDripstoneDripWater":334,"PointedDripstoneDripLava":335,"CaveVinesPickBerries":336,"BigDripleafTiltDown":337,"BigDripleafTiltUp":338,"CopperWaxOn":339,"CopperWaxOff":340,"Scrape":341,"PlayerHurtDrown":342,"PlayerHurtOnFire":343,"PlayerHurtFreeze":344,"UseSpyglass":345,"StopUsingSpyglass":346,"AmethystBlockChime":347,"AmbientScreamer":348,"HurtScreamer":349,"DeathScreamer":350,"MilkScreamer":351,"JumpToBlock":352,"PreRam":353,"PreRamScreamer":354,"RamImpact":355,"RamImpactScreamer":356,"SquidInkSquirt":357,"GlowSquidInkSquirt":358,"ConvertToStray":359,"CakeAddCandle":360,"ExtinguishCandle":361,"AmbientCandle":362,"BlockClick":363,"BlockClickFail":364,"SculkCatalystBloom":365,"SculkShriekerShriek":366,"WardenNearbyClose":367,"WardenNearbyCloser":368,"WardenNearbyClosest":369,"WardenSlightlyAngry":370,"RecordOtherside":371,"Tongue":372,"CrackIronGolem":373,"RepairIronGolem":374,"Listening":375,"Heartbeat":376,"HornBreak":377,"SculkPlace":378,"SculkSpread":379,"SculkCharge":380,"SculkSensorPlace":381,"SculkShriekerPlace":382,"goat_call_0":383,"goat_call_1":384,"goat_call_2":385,"goat_call_3":386,"goat_call_4":387,"goat_call_5":388,"goat_call_6":389,"goat_call_7":390,"goat_call_8":391,"goat_call_9":392,"goat_harmony_0":393,"goat_harmony_1":394,"goat_harmony_2":395,"goat_harmony_3":396,"goat_harmony_4":397,"goat_harmony_5":398,"goat_harmony_6":399,"goat_harmony_7":400,"goat_harmony_8":401,"goat_harmony_9":402,"goat_melody_0":403,"goat_melody_1":404,"goat_melody_2":405,"goat_melody_3":406,"goat_melody_4":407,"goat_melody_5":408,"goat_melody_6":409,"goat_melody_7":410,"goat_melody_8":411,"goat_melody_9":412,"goat_bass_0":413,"goat_bass_1":414,"goat_bass_2":415,"goat_bass_3":416,"goat_bass_4":417,"goat_bass_5":418,"goat_bass_6":419,"goat_bass_7":420,"goat_bass_8":421,"goat_bass_9":422,"_":425,"ImitateWarden":426,"ListeningAngry":427,"ItemGiven":428,"ItemTaken":429,"Disappeared":430,"Reappeared":431,"DrinkMilk":442,"FrogspawnHatched":433,"LaySpawn":434,"FrogspawnBreak":435,"SonicBoom":436,"SonicCharge":437,"SoundeventItemThrown":438,"Record5":439,"ConvertToFrog":440,"RecordPlaying":443,"EnchantingTableUse":444,"StepSand":445,"DashReady":446,"BundleDropContents":447,"BundleInsert":448,"BundleRemoveOne":449,"PressurePlateClickOff":450,"PressurePlateClickOn":451,"ButtonClickOff":452,"ButtonClickOn":453,"DoorOpen":454,"DoorClose":455,"TrapdoorOpen":456,"TrapdoorClose":457,"FenceGateOpen":458,"FenceGateClose":459,"Insert":460,"Pickup":461,"InsertEnchanted":462,"PickupEnchanted":463,"Brush":464,"BrushCompleted":465,"ShatterDecoratedPot":466,"BreakDecoratedPot":467,"SnifferEggCrack":468,"SnifferEggHatched":469,"WaxedSignInteractFail":470,"RecordRelic":471,"Bump":472,"PumpkinCarve":473,"ConvertHuskToZombie":474,"PigDeath":475,"HoglinZombified":476,"AmbientUnderwaterEnter":477,"AmbientUnderwaterExit":478}[value] || value, buffer, offset)
     },
     LegacyEntityType: (value, buffer, offset) => {
       return (ctx.li32)({"chicken":10,"cow":11,"pig":12,"sheep":13,"wolf":14,"villager":15,"mooshroom":16,"squid":17,"rabbit":18,"bat":19,"iron_golem":20,"snow_golem":21,"ocelot":22,"horse":23,"donkey":24,"mule":25,"skeleton_horse":26,"zombie_horse":27,"polar_bear":28,"llama":29,"parrot":30,"dolphin":31,"zombie":32,"creeper":33,"skeleton":34,"spider":35,"zombie_pigman":36,"slime":37,"enderman":38,"silverfish":39,"cave_spider":40,"ghast":41,"magma_cube":42,"blaze":43,"zombie_villager":44,"witch":45,"stray":46,"husk":47,"wither_skeleton":48,"guardian":49,"elder_guardian":50,"npc":51,"wither":52,"ender_dragon":53,"shulker":54,"endermite":55,"agent":56,"vindicator":57,"phantom":58,"armor_stand":61,"tripod_camera":62,"player":63,"item":64,"tnt":65,"falling_block":66,"moving_block":67,"xp_bottle":68,"xp_orb":69,"eye_of_ender_signal":70,"ender_crystal":71,"fireworks_rocket":72,"thrown_trident":73,"turtle":74,"cat":75,"shulker_bullet":76,"fishing_hook":77,"chalkboard":78,"dragon_fireball":79,"arrow":80,"snowball":81,"egg":82,"painting":83,"minecart":84,"fireball":85,"splash_potion":86,"ender_pearl":87,"leash_knot":88,"wither_skull":89,"boat":90,"wither_skull_dangerous":91,"lightning_bolt":93,"small_fireball":94,"area_effect_cloud":95,"hopper_minecart":96,"tnt_minecart":97,"chest_minecart":98,"command_block_minecart":100,"lingering_potion":101,"llama_spit":102,"evocation_fang":103,"evocation_illager":104,"vex":105,"ice_bomb":106,"balloon":107,"pufferfish":108,"salmon":109,"drowned":110,"tropicalfish":111,"cod":112,"panda":113}[value] || value, buffer, offset)
@@ -1738,7 +1794,7 @@
     mcpe_packet: (value, buffer, offset) => {
       let name = value.name
       offset = ((value, buffer, offset) => {
-        return (ctx.varint)({"login":1,"play_status":2,"server_to_client_handshake":3,"client_to_server_handshake":4,"disconnect":5,"resource_packs_info":6,"resource_pack_stack":7,"resource_pack_client_response":8,"text":9,"set_time":10,"start_game":11,"add_player":12,"add_entity":13,"remove_entity":14,"add_item_entity":15,"take_item_entity":17,"move_entity":18,"move_player":19,"rider_jump":20,"update_block":21,"add_painting":22,"tick_sync":23,"level_sound_event_old":24,"level_event":25,"block_event":26,"entity_event":27,"mob_effect":28,"update_attributes":29,"inventory_transaction":30,"mob_equipment":31,"mob_armor_equipment":32,"interact":33,"block_pick_request":34,"entity_pick_request":35,"player_action":36,"hurt_armor":38,"set_entity_data":39,"set_entity_motion":40,"set_entity_link":41,"set_health":42,"set_spawn_position":43,"animate":44,"respawn":45,"container_open":46,"container_close":47,"player_hotbar":48,"inventory_content":49,"inventory_slot":50,"container_set_data":51,"crafting_data":52,"crafting_event":53,"gui_data_pick_item":54,"adventure_settings":55,"block_entity_data":56,"player_input":57,"level_chunk":58,"set_commands_enabled":59,"set_difficulty":60,"change_dimension":61,"set_player_game_type":62,"player_list":63,"simple_event":64,"event":65,"spawn_experience_orb":66,"clientbound_map_item_data":67,"map_info_request":68,"request_chunk_radius":69,"chunk_radius_update":70,"item_frame_drop_item":71,"game_rules_changed":72,"camera":73,"boss_event":74,"show_credits":75,"available_commands":76,"command_request":77,"command_block_update":78,"command_output":79,"update_trade":80,"update_equipment":81,"resource_pack_data_info":82,"resource_pack_chunk_data":83,"resource_pack_chunk_request":84,"transfer":85,"play_sound":86,"stop_sound":87,"set_title":88,"add_behavior_tree":89,"structure_block_update":90,"show_store_offer":91,"purchase_receipt":92,"player_skin":93,"sub_client_login":94,"initiate_web_socket_connection":95,"set_last_hurt_by":96,"book_edit":97,"npc_request":98,"photo_transfer":99,"modal_form_request":100,"modal_form_response":101,"server_settings_request":102,"server_settings_response":103,"show_profile":104,"set_default_game_type":105,"remove_objective":106,"set_display_objective":107,"set_score":108,"lab_table":109,"update_block_synced":110,"move_entity_delta":111,"set_scoreboard_identity":112,"set_local_player_as_initialized":113,"update_soft_enum":114,"network_stack_latency":115,"script_custom_event":117,"spawn_particle_effect":118,"available_entity_identifiers":119,"level_sound_event_v2":120,"network_chunk_publisher_update":121,"biome_definition_list":122,"level_sound_event":123,"level_event_generic":124,"lectern_update":125,"video_stream_connect":126,"add_ecs_entity":127,"remove_ecs_entity":128,"client_cache_status":129,"on_screen_texture_animation":130,"map_create_locked_copy":131,"structure_template_data_export_request":132,"structure_template_data_export_response":133,"update_block_properties":134,"client_cache_blob_status":135,"client_cache_miss_response":136,"education_settings":137,"emote":138,"multiplayer_settings":139,"settings_command":140,"anvil_damage":141,"completed_using_item":142,"network_settings":143,"player_auth_input":144,"creative_content":145,"player_enchant_options":146,"item_stack_request":147,"item_stack_response":148,"player_armor_damage":149,"update_player_game_type":151,"emote_list":152,"position_tracking_db_broadcast":153,"position_tracking_db_request":154,"packet_violation_warning":156,"motion_prediction_hints":157,"animate_entity":158,"camera_shake":159,"player_fog":160,"correct_player_move_prediction":161,"item_component":162,"filter_text_packet":163,"debug_renderer":164,"sync_entity_property":165,"add_volume_entity":166,"remove_volume_entity":167,"simulation_type":168,"npc_dialogue":169,"edu_uri_resource_packet":170,"create_photo":171,"update_subchunk_blocks":172,"photo_info_request":173,"subchunk":174,"subchunk_request":175,"client_start_item_cooldown":176,"script_message":177,"code_builder_source":178,"ticking_areas_load_status":179,"dimension_data":180,"agent_action":181,"change_mob_property":182,"lesson_progress":183,"request_ability":184,"request_permissions":185,"toast_request":186,"update_abilities":187,"update_adventure_settings":188,"death_info":189,"editor_network":190,"feature_registry":191,"server_stats":192,"request_network_settings":193,"game_test_request":194,"game_test_results":195,"update_client_input_locks":196,"client_cheat_ability":197,"camera_presets":198,"unlocked_recipes":199,"camera_instruction":300,"compressed_biome_definitions":301,"trim_data":302,"open_sign":303,"agent_animation":304}[value] || value, buffer, offset)
+        return (ctx.varint)({"login":1,"play_status":2,"server_to_client_handshake":3,"client_to_server_handshake":4,"disconnect":5,"resource_packs_info":6,"resource_pack_stack":7,"resource_pack_client_response":8,"text":9,"set_time":10,"start_game":11,"add_player":12,"add_entity":13,"remove_entity":14,"add_item_entity":15,"take_item_entity":17,"move_entity":18,"move_player":19,"rider_jump":20,"update_block":21,"add_painting":22,"tick_sync":23,"level_sound_event_old":24,"level_event":25,"block_event":26,"entity_event":27,"mob_effect":28,"update_attributes":29,"inventory_transaction":30,"mob_equipment":31,"mob_armor_equipment":32,"interact":33,"block_pick_request":34,"entity_pick_request":35,"player_action":36,"hurt_armor":38,"set_entity_data":39,"set_entity_motion":40,"set_entity_link":41,"set_health":42,"set_spawn_position":43,"animate":44,"respawn":45,"container_open":46,"container_close":47,"player_hotbar":48,"inventory_content":49,"inventory_slot":50,"container_set_data":51,"crafting_data":52,"crafting_event":53,"gui_data_pick_item":54,"adventure_settings":55,"block_entity_data":56,"player_input":57,"level_chunk":58,"set_commands_enabled":59,"set_difficulty":60,"change_dimension":61,"set_player_game_type":62,"player_list":63,"simple_event":64,"event":65,"spawn_experience_orb":66,"clientbound_map_item_data":67,"map_info_request":68,"request_chunk_radius":69,"chunk_radius_update":70,"item_frame_drop_item":71,"game_rules_changed":72,"camera":73,"boss_event":74,"show_credits":75,"available_commands":76,"command_request":77,"command_block_update":78,"command_output":79,"update_trade":80,"update_equipment":81,"resource_pack_data_info":82,"resource_pack_chunk_data":83,"resource_pack_chunk_request":84,"transfer":85,"play_sound":86,"stop_sound":87,"set_title":88,"add_behavior_tree":89,"structure_block_update":90,"show_store_offer":91,"purchase_receipt":92,"player_skin":93,"sub_client_login":94,"initiate_web_socket_connection":95,"set_last_hurt_by":96,"book_edit":97,"npc_request":98,"photo_transfer":99,"modal_form_request":100,"modal_form_response":101,"server_settings_request":102,"server_settings_response":103,"show_profile":104,"set_default_game_type":105,"remove_objective":106,"set_display_objective":107,"set_score":108,"lab_table":109,"update_block_synced":110,"move_entity_delta":111,"set_scoreboard_identity":112,"set_local_player_as_initialized":113,"update_soft_enum":114,"network_stack_latency":115,"script_custom_event":117,"spawn_particle_effect":118,"available_entity_identifiers":119,"level_sound_event_v2":120,"network_chunk_publisher_update":121,"biome_definition_list":122,"level_sound_event":123,"level_event_generic":124,"lectern_update":125,"video_stream_connect":126,"add_ecs_entity":127,"remove_ecs_entity":128,"client_cache_status":129,"on_screen_texture_animation":130,"map_create_locked_copy":131,"structure_template_data_export_request":132,"structure_template_data_export_response":133,"update_block_properties":134,"client_cache_blob_status":135,"client_cache_miss_response":136,"education_settings":137,"emote":138,"multiplayer_settings":139,"settings_command":140,"anvil_damage":141,"completed_using_item":142,"network_settings":143,"player_auth_input":144,"creative_content":145,"player_enchant_options":146,"item_stack_request":147,"item_stack_response":148,"player_armor_damage":149,"update_player_game_type":151,"emote_list":152,"position_tracking_db_broadcast":153,"position_tracking_db_request":154,"packet_violation_warning":156,"motion_prediction_hints":157,"animate_entity":158,"camera_shake":159,"player_fog":160,"correct_player_move_prediction":161,"item_component":162,"filter_text_packet":163,"debug_renderer":164,"sync_entity_property":165,"add_volume_entity":166,"remove_volume_entity":167,"simulation_type":168,"npc_dialogue":169,"edu_uri_resource_packet":170,"create_photo":171,"update_subchunk_blocks":172,"photo_info_request":173,"subchunk":174,"subchunk_request":175,"client_start_item_cooldown":176,"script_message":177,"code_builder_source":178,"ticking_areas_load_status":179,"dimension_data":180,"agent_action":181,"change_mob_property":182,"lesson_progress":183,"request_ability":184,"request_permissions":185,"toast_request":186,"update_abilities":187,"update_adventure_settings":188,"death_info":189,"editor_network":190,"feature_registry":191,"server_stats":192,"request_network_settings":193,"game_test_request":194,"game_test_results":195,"update_client_input_locks":196,"client_cheat_ability":197,"camera_presets":198,"unlocked_recipes":199,"camera_instruction":300,"compressed_biome_definitions":301,"trim_data":302,"open_sign":303,"agent_animation":304,"refresh_entitlements":305}[value] || value, buffer, offset)
       })(name, buffer, offset)
       let params = value.params
       offset = ((value, buffer, offset) => {
@@ -1942,6 +1998,7 @@
           case "trim_data": return (ctx.packet_trim_data)(value, buffer, offset)
           case "open_sign": return (ctx.packet_open_sign)(value, buffer, offset)
           case "agent_animation": return (ctx.packet_agent_animation)(value, buffer, offset)
+          case "refresh_entitlements": return (ctx.packet_refresh_entitlements)(value, buffer, offset)
           default: return (ctx.void)(value, buffer, offset)
         }
       })(params, buffer, offset)
@@ -2000,6 +2057,20 @@
       offset = (ctx.BehaviourPackInfos)(behaviour_packs, buffer, offset)
       let texture_packs = value.texture_packs
       offset = (ctx.TexturePackInfos)(texture_packs, buffer, offset)
+      let resource_pack_links = value.resource_pack_links
+      offset = ((value, buffer, offset) => {
+        offset = (ctx.varint)(value.length, buffer, offset)
+        for (let i = 0; i < value.length; i++) {
+          offset = ((value, buffer, offset) => {
+          let id1 = value.id
+          offset = (ctx.string)(id1, buffer, offset)
+          let url1 = value.url
+          offset = (ctx.string)(url1, buffer, offset)
+          return offset
+        })(value[i], buffer, offset)
+        }
+        return offset
+      })(resource_pack_links, buffer, offset)
       return offset
     },
     packet_resource_pack_stack: (value, buffer, offset) => {
@@ -2129,8 +2200,10 @@
       offset = (ctx.BlockCoordinates)(spawn_position, buffer, offset)
       let achievements_disabled = value.achievements_disabled
       offset = (ctx.bool)(achievements_disabled, buffer, offset)
-      let editor_world = value.editor_world
-      offset = (ctx.bool)(editor_world, buffer, offset)
+      let editor_world_type = value.editor_world_type
+      offset = ((value, buffer, offset) => {
+        return (ctx.zigzag32)({"not_editor":0,"project":1,"test_level":2}[value] || value, buffer, offset)
+      })(editor_world_type, buffer, offset)
       let created_in_editor = value.created_in_editor
       offset = (ctx.bool)(created_in_editor, buffer, offset)
       let exported_from_editor = value.exported_from_editor
@@ -5150,8 +5223,34 @@
       return offset
     },
     packet_camera_presets: (value, buffer, offset) => {
-      let data = value.data
-      offset = (ctx.nbt)(data, buffer, offset)
+      let name = value.name
+      offset = (ctx.string)(name, buffer, offset)
+      let parent = value.parent
+      offset = (ctx.string)(parent, buffer, offset)
+      let position = value.position
+      offset = (ctx.Vec3fopts)(position, buffer, offset)
+      let rotation = value.rotation
+      offset = (ctx.Vec2fopts)(rotation, buffer, offset)
+      let audio_listener = value.audio_listener
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.u8)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(audio_listener, buffer, offset)
+      let player_effects = value.player_effects
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.bool)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(player_effects, buffer, offset)
       return offset
     },
     packet_unlocked_recipes: (value, buffer, offset) => {
@@ -5170,8 +5269,108 @@
       return offset
     },
     packet_camera_instruction: (value, buffer, offset) => {
-      let data = value.data
-      offset = (ctx.nbt)(data, buffer, offset)
+      let instruction_set = value.instruction_set
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = ((value, buffer, offset) => {
+          let runtime_id1 = value.runtime_id
+          offset = (ctx.li32)(runtime_id1, buffer, offset)
+          let ease_data = value.ease_data
+          offset = ((value, buffer, offset) => {
+            if (value != null) {
+              offset = ctx.bool(1, buffer, offset)
+              offset = ((value, buffer, offset) => {
+              let type1 = value.type
+              offset = ((value, buffer, offset) => {
+                return (ctx.u8)({"Linear":0,"Spring":1,"InQuad":2,"OutQuad":3,"InOutQuad":4,"InCubic":5,"OutCubic":6,"InOutCubic":7,"InQuart":8,"OutQuart":9,"InOutQuart":10,"InQuint":11,"OutQuint":12,"InOutQuint":13,"InSine":14,"OutSine":15,"InOutSine":16,"InExpo":17,"OutExpo":18,"InOutExpo":19,"InCirc":20,"OutCirc":21,"InOutCirc":22,"InBounce":23,"OutBounce":24,"InOutBounce":25,"InBack":26,"OutBack":27,"InOutBack":28,"InElastic":29,"OutElastic":30,"InOutElastic":31}[value] || value, buffer, offset)
+              })(type1, buffer, offset)
+              let duration1 = value.duration
+              offset = (ctx.lf32)(duration1, buffer, offset)
+              return offset
+            })(value, buffer, offset)
+            } else {
+              offset = ctx.bool(0, buffer, offset)
+            }
+            return offset
+          })(ease_data, buffer, offset)
+          let position1 = value.position
+          offset = ((value, buffer, offset) => {
+            if (value != null) {
+              offset = ctx.bool(1, buffer, offset)
+              offset = (ctx.vec3f)(value, buffer, offset)
+            } else {
+              offset = ctx.bool(0, buffer, offset)
+            }
+            return offset
+          })(position1, buffer, offset)
+          let rotation1 = value.rotation
+          offset = ((value, buffer, offset) => {
+            if (value != null) {
+              offset = ctx.bool(1, buffer, offset)
+              offset = (ctx.vec2f)(value, buffer, offset)
+            } else {
+              offset = ctx.bool(0, buffer, offset)
+            }
+            return offset
+          })(rotation1, buffer, offset)
+          let facing = value.facing
+          offset = ((value, buffer, offset) => {
+            if (value != null) {
+              offset = ctx.bool(1, buffer, offset)
+              offset = (ctx.vec3f)(value, buffer, offset)
+            } else {
+              offset = ctx.bool(0, buffer, offset)
+            }
+            return offset
+          })(facing, buffer, offset)
+          let default1 = value.default
+          offset = ((value, buffer, offset) => {
+            if (value != null) {
+              offset = ctx.bool(1, buffer, offset)
+              offset = (ctx.bool)(value, buffer, offset)
+            } else {
+              offset = ctx.bool(0, buffer, offset)
+            }
+            return offset
+          })(default1, buffer, offset)
+          return offset
+        })(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(instruction_set, buffer, offset)
+      let clear = value.clear
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = (ctx.bool)(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(clear, buffer, offset)
+      let fade = value.fade
+      offset = ((value, buffer, offset) => {
+        if (value != null) {
+          offset = ctx.bool(1, buffer, offset)
+          offset = ((value, buffer, offset) => {
+          let fade_in_duration = value.fade_in_duration
+          offset = (ctx.lf32)(fade_in_duration, buffer, offset)
+          let wait_duration = value.wait_duration
+          offset = (ctx.lf32)(wait_duration, buffer, offset)
+          let fade_out_duration = value.fade_out_duration
+          offset = (ctx.lf32)(fade_out_duration, buffer, offset)
+          let color_rgb = value.color_rgb
+          offset = (ctx.vec3f)(color_rgb, buffer, offset)
+          return offset
+        })(value, buffer, offset)
+        } else {
+          offset = ctx.bool(0, buffer, offset)
+        }
+        return offset
+      })(fade, buffer, offset)
       return offset
     },
     packet_compressed_biome_definitions: (value, buffer, offset) => {
@@ -5226,6 +5425,9 @@
       })(animation, buffer, offset)
       let entity_runtime_id = value.entity_runtime_id
       offset = (ctx.varint64)(entity_runtime_id, buffer, offset)
+      return offset
+    },
+    packet_refresh_entitlements: (value, buffer, offset) => {
       return offset
     },
     string: (value, buffer, offset) => {
@@ -5338,7 +5540,7 @@
           return (ctx.lu16)(val, buffer, offset)
     },
     InputFlag: (value, buffer, offset) => {
-      const flags = {"ascend": 1n,"descend": 2n,"north_jump": 4n,"jump_down": 8n,"sprint_down": 16n,"change_height": 32n,"jumping": 64n,"auto_jumping_in_water": 128n,"sneaking": 256n,"sneak_down": 512n,"up": 1024n,"down": 2048n,"left": 4096n,"right": 8192n,"up_left": 16384n,"up_right": 32768n,"want_up": 65536n,"want_down": 131072n,"want_down_slow": 262144n,"want_up_slow": 524288n,"sprinting": 1048576n,"ascend_block": 2097152n,"descend_block": 4194304n,"sneak_toggle_down": 8388608n,"persist_sneak": 16777216n,"start_sprinting": 33554432n,"stop_sprinting": 67108864n,"start_sneaking": 134217728n,"stop_sneaking": 268435456n,"start_swimming": 536870912n,"stop_swimming": 1073741824n,"start_jumping": 2147483648n,"start_gliding": 4294967296n,"stop_gliding": 8589934592n,"item_interact": 17179869184n,"block_action": 34359738368n,"item_stack_request": 68719476736n,"handled_teleport": 137438953472n,"emoting": 274877906944n,"missed_swing": 549755813888n,"start_crawling": 1099511627776n,"stop_crawling": 2199023255552n,}
+      const flags = {"ascend": 1n,"descend": 2n,"north_jump": 4n,"jump_down": 8n,"sprint_down": 16n,"change_height": 32n,"jumping": 64n,"auto_jumping_in_water": 128n,"sneaking": 256n,"sneak_down": 512n,"up": 1024n,"down": 2048n,"left": 4096n,"right": 8192n,"up_left": 16384n,"up_right": 32768n,"want_up": 65536n,"want_down": 131072n,"want_down_slow": 262144n,"want_up_slow": 524288n,"sprinting": 1048576n,"ascend_block": 2097152n,"descend_block": 4194304n,"sneak_toggle_down": 8388608n,"persist_sneak": 16777216n,"start_sprinting": 33554432n,"stop_sprinting": 67108864n,"start_sneaking": 134217728n,"stop_sneaking": 268435456n,"start_swimming": 536870912n,"stop_swimming": 1073741824n,"start_jumping": 2147483648n,"start_gliding": 4294967296n,"stop_gliding": 8589934592n,"item_interact": 17179869184n,"block_action": 34359738368n,"item_stack_request": 68719476736n,"handled_teleport": 137438953472n,"emoting": 274877906944n,"missed_swing": 549755813888n,"start_crawling": 1099511627776n,"stop_crawling": 2199023255552n,"start_flying": 4398046511104n,"stop_flying": 8796093022208n,}
           let val = value._value || 0n
           for (const key in flags) {
             if (value[key]) val |= flags[key]
